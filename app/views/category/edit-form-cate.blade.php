@@ -63,7 +63,7 @@
 
                     <div class="form-group">
                         <label for="">Created by</label>
-                        <input type="number" name="created_by" value="-1" class="form-control" value="{{$model->created_by}}">
+                        <input type="number" name="created_by" class="form-control" value="{{$model->created_by}}">
                     </div>
 
                 </div>
@@ -78,44 +78,5 @@
         </form>
         
     </div>
-
-
-     <script src="./js/js-form-validator-2.1/js-form-validator.min.js"></script>
-
-        <script>
-             var validator = new Validator(document.querySelector('#edit-product-form'), function(err, res) {
-                if (res === true) {
-                    editProduct();
-                }
-
-                return false;
-            }, {
-                rules: {
-                    checkImgUrl: function(value) {
-                        return (/\.(gif|jpe?g|tiff|png|webp|bmp)$/i).test(value);
-                    }
-                },
-                messages: {
-                    en: {
-                        required: {
-                            empty: 'Không được để trống',
-                            incorrect: 'Nhập sai thông tin'
-                        },
-                        minlength: {
-                            empty: 'Hãy nhập tối thiểu {0} ký tự',
-                            incorrect: 'Hãy nhập tối thiểu {0} ký tự'
-                        },
-                        checkImgUrl: {
-                            empty: 'Nhập đường dẫn ảnh',
-                            incorrect: 'Đường dẫn ảnh không đúng định dạng'
-                        },
-                        float: {
-                            empty: 'Nhập số phòng',
-                            incorrect: 'Hãy nhập số'
-                        }
-                    }
-                }
-            });
-        </script>
 </body>
 </html>

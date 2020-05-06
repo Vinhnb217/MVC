@@ -41,7 +41,7 @@
                         <td>{{$pro->getCategoryName()}}</td>
                         <td>
                             <a href="./edit-product?id={{$pro->id}}" class="btn btn-primary">Edit</a>
-                            <a href="./remove-product?id={{$pro->id}}" class="btn btn-danger">Remove</a>
+                            <a href="./remove-product?id={{$pro->id}}" onClick=\"return confirm('Are you sure you want to delete?')\" class="btn btn-danger">Remove</a>
                         </td>
                     </tr>
                 @endforeach

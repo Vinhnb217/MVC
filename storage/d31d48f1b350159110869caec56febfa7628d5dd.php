@@ -41,7 +41,7 @@
                         <td><?php echo e($pro->getCategoryName()); ?></td>
                         <td>
                             <a href="./edit-product?id=<?php echo e($pro->id); ?>" class="btn btn-primary">Edit</a>
-                            <a href="./remove-product?id=<?php echo e($pro->id); ?>" class="btn btn-danger">Remove</a>
+                            <a href="./remove-product?id=<?php echo e($pro->id); ?>" onClick=\"return confirm('Are you sure you want to delete?')\" class="btn btn-danger">Remove</a>
                         </td>
                     </tr>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

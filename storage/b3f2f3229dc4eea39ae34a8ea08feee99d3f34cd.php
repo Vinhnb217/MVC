@@ -36,7 +36,7 @@
                         <td><?php echo e($pro->created_by); ?></td>
                         <td>
                            <a href="./edit-category?id=<?php echo e($pro->id); ?>" class="btn btn-primary">Edit</a>
-                           <a href="./remove-category?id=<?php echo e($pro->id); ?>" onclick="removeElement(${pro.id})" class="btn btn-danger">Remove</a>
+                           <a href="./remove-category?id=<?php echo e($pro->id); ?>"  class="btn btn-danger">Remove</a>
                         </td>
                     </tr>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

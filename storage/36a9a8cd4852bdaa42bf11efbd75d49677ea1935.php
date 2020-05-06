@@ -26,6 +26,7 @@
                     <div class="form-group">
                         <label for="">Tên sản phẩm</label>
                         <input type="text" name="name" class="form-control">
+                        <p class="text-danger"><?php echo e($nameErr); ?></p>
                     </div>
 
                     <div class="form-group">
@@ -35,16 +36,19 @@
                             <option value="<?php echo e($ca->id); ?>"><?php echo e($ca->cate_name); ?></option>
                             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </select>
+                        <p class="text-danger"><?php echo e($cateErr); ?></p>
                     </div>
 
                     <div class="form-group">
                         <label for="">Giá sản phẩm</label>
                         <input type="number" name="price" class="form-control">
+                        <p class="text-danger"><?php echo e($priceErr); ?></p>
                     </div>
 
                     <div class="form-group">
                         <label for="">Mô tả ngắn</label>
                         <textarea name="short_desc" class="form-control" rows="4"></textarea>
+                        <p class="text-danger"><?php echo e($descErr); ?></p>
                     </div>
                 </div>
 
@@ -58,11 +62,13 @@
                     <div class="form-group">
                         <label for="">Đánh giá</label>
                         <input type="number" step="0.1" name="star" class="form-control">
+                        <p class="text-danger"><?php echo e($starErr); ?></p>
                     </div>
 
                     <div class="form-group">
                         <label for="">Lượt xem</label>
                         <input type="number" name="views" class="form-control">
+                        <p class="text-danger"><?php echo e($viewErr); ?></p>
                     </div>
 
                 </div>
@@ -73,6 +79,7 @@
                     <div class="form-group">
                         <label for="">Chi tiết</label>
                         <textarea name="detail" class="form-control" rows="6"></textarea>
+                        <p class="text-danger"><?php echo e($detailErr); ?></p>
                     </div>
                 </div>
 

@@ -36,7 +36,7 @@
                         <td>{{$pro->created_by}}</td>
                         <td>
                            <a href="./edit-category?id={{$pro->id}}" class="btn btn-primary">Edit</a>
-                           <a href="./remove-category?id={{$pro->id}}" onclick="removeElement(${pro.id})" class="btn btn-danger">Remove</a>
+                           <a href="./remove-category?id={{$pro->id}}"  class="btn btn-danger">Remove</a>
                         </td>
                     </tr>
                 @endforeach
