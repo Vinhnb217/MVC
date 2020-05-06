@@ -57,6 +57,7 @@
                     <div class="form-group">
                         <label for="">Ảnh sản phẩm</label>
                         <input type="file" name="image" class="form-control">
+                        <p class="text-danger">{{$imageErr}}</p>
                     </div>
 
                     <div class="form-group">

@@ -10,10 +10,15 @@ class ProductController extends BaseController{
         $name_err = isset($_GET['name_err']) ? $_GET['name_err'] : null;
         $cate_err = isset($_GET['cate_err']) ? $_GET['cate_err'] : null;
         $price_err = isset($_GET['price_err']) ? $_GET['price_err'] : null;
+
+        $image_err = isset($_GET['image_err']) ? $_GET['image_err'] : null;
+
+
         $desc_err = isset($_GET['desc_err']) ? $_GET['desc_err'] : null;
         $star_err = isset($_GET['star_err']) ? $_GET['star_err'] : null;
         $view_err = isset($_GET['view_err']) ? $_GET['view_err'] : null;
         $detail_err = isset($_GET['detail_err']) ? $_GET['detail_err'] : null;
+        
 
         $this->render(
             'product.add-form',
@@ -22,10 +27,15 @@ class ProductController extends BaseController{
                 'nameErr' => $name_err,
                 'cateErr' => $cate_err,
                 'priceErr' => $price_err,
+
+
+                'imageErr' => $image_err,
+
                 'descErr' => $desc_err,
                 'starErr' => $star_err,
                 'viewErr' => $view_err,
                 'detailErr' => $detail_err
+                
             ]
         );
 
@@ -90,12 +100,22 @@ class ProductController extends BaseController{
         if (empty($requestData['price'])) {
             $price_err = 'Bạn chưa nhập giá';
         }
+
+
+        if (empty($requestData['image'])) {
+            $image_err = 'Bạn chưa chọn file ảnh';
+        }
+
+
         if (empty($requestData['short_desc'])) {
             $desc_err = 'Bạn chưa nhập mô tả';
         }
         if (empty($requestData['star'])) {
             $star_err = 'Bạn chưa nhập sao';
         }
+
+        
+
         if (empty($requestData['views'])) {
             $view_err = 'Bạn chưa nhập lượt xem';
         }
@@ -103,8 +123,8 @@ class ProductController extends BaseController{
             $detail_err = 'Bạn chưa nhập chi tiết sản phẩm';
         }
 
-        if (isset($name_err) || isset($cate_err) || isset($price_err) || isset($desc_err) || isset($star_err) || isset($view_err) || isset($detail_err)) {
-            header("location: add-product?name_err=$name_err&cate_err=$cate_err&price_err=$price_err&desc_err=$desc_err&star_err=$star_err&view_err=$view_err&detail_err=$detail_err");
+        if (isset($name_err) || isset($cate_err) || isset($price_err) || isset($desc_err) || isset($star_err) || isset($view_err) || isset($detail_err) || isset($image_err)  ) {
+            header("location: add-product?name_err=$name_err&cate_err=$cate_err&price_err=$price_err&desc_err=$desc_err&star_err=$star_err&view_err=$view_err&detail_err=$detail_err&image_err=$image_err");
             die;
         }
 
